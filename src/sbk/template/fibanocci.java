@@ -6,14 +6,16 @@ public class fibanocci {
 
         int n = 10;
 
-        fibanocci(n);
+        System.out.println(fibanoccirec(n));
     }
-    static void fibanocci(int n){
-        int i = 0, j=1;
-        while(j<n){
-            int temp = i+j;
-            i = j;j= temp;
-        }
 
+
+
+    static int fibanoccirec(int n) {
+            if(n<=1)
+            {
+                return n;
+            }
+           return fibanoccirec(n) + fibanoccirec(n-1);
     }
 }
